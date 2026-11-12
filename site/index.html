@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Mohamed Safris S — Full Stack Engineer & Web Specialist</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loader" class="loader" aria-live="polite">
+    <div class="loader-inner">
+      <div class="loader-crest" aria-hidden="true"><span>MS</span></div>
+      <p class="loader-tag">INTERACTIVE PORTFOLIO · SOFTWARE ARCHITECTURE</p>
+      <div class="loader-name" id="loader-name">Mohamed Safris S</div>
+      <div class="loader-track"><div class="loader-bar" id="loader-bar"></div></div>
+      <div class="loader-pct" id="loader-pct">0%</div>
+    </div>
+  </div>
+
+  <header class="topbar" id="topbar">
+    <button class="brand" id="brand-btn" type="button">
+      <span class="brand-mark" aria-hidden="true">MS</span>
+      <span id="brand-name"></span>
+    </button>
+    <nav class="nav" aria-label="Primary">
+      <button type="button" data-target="home">Home</button>
+      <button type="button" data-target="about">About</button>
+      <button type="button" data-target="work">Work</button>
+      <button type="button" data-target="skills">Skills</button>
+      <button type="button" data-target="resume">Resume</button>
+      <button type="button" data-target="contact">Contact</button>
+    </nav>
+    <a class="topbar-badge" id="topbar-cta" href="#contact">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span>Available</span>
+    </a>
+    <div class="progress-track"><div class="progress-bar" id="progress-bar"></div></div>
+  </header>
+
+  <main class="stage" aria-label="Interactive Portfolio Film">
+    <div class="stage-grid" aria-hidden="true"></div>
+    <div class="film-frame">
+      <div class="film-box" id="film-box">
+        <video id="film" poster="media/poster.jpg" muted playsinline webkit-playsinline preload="auto"></video>
+      </div>
+    </div>
+    <div class="stage-vignette" aria-hidden="true"></div>
+    <div class="mobile-scrim" aria-hidden="true"></div>
+
+    <aside class="chapter-rail" id="chapter-rail" aria-label="Chapters">
+      <button type="button" data-target="home" data-label="Intro" aria-label="Intro"></button>
+      <button type="button" data-target="about" data-label="About" aria-label="About"></button>
+      <button type="button" data-target="work" data-label="Work" aria-label="Work"></button>
+      <button type="button" data-target="skills" data-label="Skills" aria-label="Skills"></button>
+      <button type="button" data-target="resume" data-label="Resume" aria-label="Resume"></button>
+      <button type="button" data-target="contact" data-label="Contact" aria-label="Contact"></button>
+      <button type="button" data-target="outro" data-label="Finale" aria-label="Finale"></button>
+    </aside>
+
+    <section class="section section--left" id="sec-intro" data-section="intro">
+      <p class="eyebrow">Hi, I'm</p>
+      <h1 class="hero-name">
+        <span id="name-line1" class="hero-line1"></span>
+        <span id="name-line2" class="accent hero-line2"></span>
+      </h1>
+      <p class="hero-role" id="hero-role"></p>
+      <div class="status-pill">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span id="hero-status"></span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span id="hero-location"></span>
+      </div>
+      <div class="hero-actions">
+        <button class="hero-cta hero-cta--primary" id="hero-explore" type="button">Explore Work ↓</button>
+        <a class="hero-cta hero-cta--ghost" id="hero-cv" target="_blank" rel="noopener">Resume PDF ↗</a>
+      </div>
+    </section>
+
+    <section class="section section--left" id="sec-about" data-section="about">
+      <div class="glass-panel">
+        <p class="eyebrow">01 — ABOUT</p>
+        <h2 class="sec-title" id="about-title"></h2>
+        <p class="sec-desc" id="about-desc"></p>
+        <div class="stats-grid" id="about-stats"></div>
+      </div>
+    </section>
+
+    <section class="section section--right" id="sec-work" data-section="work">
+      <p class="eyebrow">02 — WORK</p>
+      <h2 class="sec-heading">Selected Projects</h2>
+      <div class="projects-list" id="work-list"></div>
+    </section>
+
+    <section class="section section--right" id="sec-skills" data-section="skills">
+      <div class="glass-panel skills-panel">
+        <p class="eyebrow">03 — SKILLS</p>
+        <h2 class="sec-heading">Core Stack</h2>
+        <p class="skills-sub">Production-tested across fintech directories, e-invoicing, and real-time systems.</p>
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section--right section--resume" id="sec-resume" data-section="resume">
+      <article class="paper-card" id="resume-card">
+        <div class="paper-head">
+          <div>
+            <p class="paper-eyebrow">04 — RESUME</p>
+            <h2 class="paper-name" id="resume-name"></h2>
+            <p class="paper-role" id="resume-role"></p>
+          </div>
+          <a class="paper-btn" id="resume-download" target="_blank" rel="noopener">Download PDF ↗</a>
+        </div>
+        <div class="paper-cols">
+          <div class="paper-block">
+            <h3>Experience</h3>
+            <ul id="resume-exp" class="paper-list"></ul>
+          </div>
+          <div class="paper-block">
+            <h3>Education</h3>
+            <ul id="resume-edu" class="paper-list"></ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section section--right" id="sec-contact" data-section="contact">
+      <div class="glass-panel contact-panel">
+        <p class="eyebrow">05 — CONTACT</p>
+        <h2 class="sec-heading">Let's Connect</h2>
+        <p class="contact-loc" id="contact-loc"></p>
+        <div class="contact-links" id="contact-links"></div>
+      </div>
+    </section>
+
+    <div class="outro-backdrop" id="outro-backdrop" aria-hidden="true"></div>
+    <section class="section section--outro" id="sec-outro" data-section="outro">
+      <div class="glass-panel outro-card" id="outro-card">
+        <div class="outro-glow" aria-hidden="true"></div>
+        <div class="outro-crest outro-step" style="--step: 0" aria-hidden="true">MS</div>
+        <div class="outro-rule" aria-hidden="true"></div>
+        <p class="eyebrow outro-step" style="--step: 1">06 — END OF REEL · THANK YOU</p>
+        <h2 class="outro-title outro-step" style="--step: 2">
+          Ready to build your <span class="accent">next flagship platform.</span>
+        </h2>
+        <p class="outro-copy outro-step" style="--step: 3">
+          Thank you for scrolling through my interactive portfolio. Always excited to engineer resilient enterprise software, sharp interfaces, and scalable systems.
+        </p>
+        <div class="outro-dock outro-step" id="outro-dock" style="--step: 4"></div>
+        <div class="outro-meta outro-step" style="--step: 5">
+          <span class="outro-sig" id="outro-sig"></span>
+          <span class="outro-badge">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span id="outro-status"></span>
+          </span>
+        </div>
+        <div class="outro-actions outro-step" style="--step: 6">
+          <a class="outro-btn outro-btn--primary" id="outro-email">Start a Conversation ↗</a>
+          <button class="outro-btn outro-btn--ghost" id="outro-top" type="button">Replay Story ↑</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="hud-telemetry" id="hud-telemetry" aria-hidden="true">
+      <span class="hud-chapter" id="hud-chapter">00 · INTRO</span>
+      <span class="hud-sep">/</span>
+      <span class="hud-time" id="hud-time">00:00.0</span>
+    </div>
+
+    <div class="scroll-hint" id="scroll-hint" aria-hidden="true">
+      <span>Scroll to explore</span>
+      <span class="hint-line"></span>
+    </div>
+  </main>
+
+  <div id="scroll-spacer" aria-hidden="true"></div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
